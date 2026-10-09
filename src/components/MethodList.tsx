@@ -12,7 +12,7 @@ export function MethodList() {
     <div className="relative lg:col-span-8">
       <motion.span
         aria-hidden="true"
-        className="absolute bottom-2 left-[0.7rem] top-3 hidden w-px origin-top bg-gold/45 sm:block"
+        className="absolute bottom-2 left-[0.7rem] top-3 hidden w-px origin-top bg-gilt/50 sm:block"
         initial={reduce ? { scaleY: 1 } : { scaleY: 0 }}
         whileInView={{ scaleY: 1 }}
         viewport={{ once: true, margin: "-10% 0px" }}
@@ -28,7 +28,7 @@ export function MethodList() {
             viewport={{ once: true, margin: "-8% 0px" }}
             transition={{ duration: 0.7, ease, delay: index * 0.08 }}
           >
-            <span className="relative z-10 font-serif text-2xl text-gold">{step.index}</span>
+            <span className="relative z-10 font-serif text-2xl text-gilt">{step.index}</span>
             <div className="border-t border-cream/15 pt-1 sm:border-0 sm:pt-0">
               <h3 className="font-serif text-2xl">{step.title}</h3>
               <p className="mt-2 max-w-xl text-sm leading-7 text-cream/75">{step.text}</p>

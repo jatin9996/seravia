@@ -112,9 +112,9 @@ export default function SciencePage() {
           <div className="mt-8 divide-y divide-cream/15 border-y border-cream/15">
             {faqs.map((item) => (
               <details key={item.q} className="group py-5">
-                <summary className="flex cursor-pointer list-none items-center justify-between gap-6 font-serif text-2xl tracking-tight">
-                  {item.q}
-                  <span className="text-gold transition duration-300 group-open:rotate-45" aria-hidden="true">
+                <summary className="flex cursor-pointer list-none items-start justify-between gap-4 font-serif text-xl tracking-tight sm:gap-6 sm:text-2xl">
+                  <span>{item.q}</span>
+                  <span className="mt-1 shrink-0 text-gilt transition duration-300 group-open:rotate-45" aria-hidden="true">
                     +
                   </span>
                 </summary>

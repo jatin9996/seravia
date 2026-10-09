@@ -40,9 +40,9 @@ export function ContactForm() {
 
   if (status === "sent") {
     return (
-      <div className="rounded-[1.6rem] border border-leaf/20 bg-sage/50 p-8 sm:p-10">
+      <div className="rounded-[1.6rem] border border-leaf/20 bg-sage/50 p-5 sm:p-10">
         <p className="text-xs uppercase tracking-[0.2em] text-moss">Note received here</p>
-        <h2 className="mt-3 font-serif text-4xl tracking-tight text-ink">Thank you, {name}.</h2>
+        <h2 className="mt-3 font-serif text-3xl tracking-tight text-ink sm:text-4xl">Thank you, {name}.</h2>
         <p className="mt-4 max-w-md text-base leading-7 text-muted">
           Your message is confirmed on this page so you can see the flow. Seravia’s inbox is not
           connected yet — when it is, this same form is ready to send.
@@ -55,7 +55,7 @@ export function ContactForm() {
   }
 
   return (
-    <form onSubmit={onSubmit} className="rounded-[1.6rem] border border-ink/10 bg-cream p-6 sm:p-8" noValidate>
+    <form onSubmit={onSubmit} className="rounded-[1.6rem] border border-ink/10 bg-cream p-5 sm:p-8" noValidate>
       <div className="grid gap-5 sm:grid-cols-2">
         <label className="block text-sm">
           <span className="text-ink">Name</span>
@@ -90,7 +90,7 @@ export function ContactForm() {
           {error}
         </p>
       ) : null}
-      <button type="submit" className="btn btn-primary mt-6">
+      <button type="submit" className="btn btn-primary mt-6 w-full justify-center sm:w-auto">
         Send the note
         <svg viewBox="0 0 16 16" className="btn-arrow h-3.5 w-3.5" aria-hidden="true" fill="none">
           <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" />

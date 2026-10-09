@@ -14,7 +14,7 @@ export function Footer() {
           </p>
         </div>
         <div className="md:col-span-3">
-          <p className="text-xs uppercase tracking-[0.2em] text-gold">Visit</p>
+          <p className="text-xs uppercase tracking-[0.2em] text-gilt">Visit</p>
           <ul className="mt-4 space-y-2 text-sm">
             <li>
               <Link href="/" className="text-cream/80 transition hover:text-cream">
@@ -31,7 +31,7 @@ export function Footer() {
           </ul>
         </div>
         <div className="md:col-span-4">
-          <p className="text-xs uppercase tracking-[0.2em] text-gold">A note</p>
+          <p className="text-xs uppercase tracking-[0.2em] text-gilt">A note</p>
           <p className="mt-4 text-sm leading-7 text-cream/75">
             This is an introduction to the house. It is not a diagnosis, a prescription, or a promise of
             a clinical result. For skin that is painful, rapidly changing, or not improving, please see a

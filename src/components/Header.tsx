@@ -16,6 +16,15 @@ export function Header() {
     setOpen(false);
   }, [pathname]);
 
+  useEffect(() => {
+    if (!open) return;
+    const previous = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    return () => {
+      document.body.style.overflow = previous;
+    };
+  }, [open]);
+
   return (
     <header className="fixed inset-x-0 top-0 z-50 border-b border-ink/10 bg-paper/85 backdrop-blur-md">
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-5 sm:px-8">
@@ -50,7 +59,7 @@ export function Header() {
         </Link>
         <button
           type="button"
-          className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-ink/15 md:hidden"
+          className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-ink/15 md:hidden"
           aria-expanded={open}
           aria-controls="mobile-nav"
           onClick={() => setOpen((value) => !value)}
@@ -71,14 +80,14 @@ export function Header() {
         {open ? (
           <motion.nav
             id="mobile-nav"
-            className="border-t border-ink/10 bg-paper px-5 py-6 md:hidden"
+            className="overflow-hidden border-t border-ink/10 bg-paper px-5 py-4 md:hidden"
             aria-label="Mobile"
             initial={reduce ? false : { height: 0, opacity: 0 }}
             animate={{ height: "auto", opacity: 1 }}
             exit={reduce ? undefined : { height: 0, opacity: 0 }}
             transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
           >
-            <div className="flex flex-col gap-4 overflow-hidden">
+            <div className="flex flex-col">
               {nav.map((item, index) => (
                 <motion.div
                   key={item.href}
@@ -86,11 +95,25 @@ export function Header() {
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1], delay: 0.08 + index * 0.06 }}
                 >
-                  <Link href={item.href} className="font-serif text-3xl tracking-tight text-ink">
+                  <Link
+                    href={item.href}
+                    className="block py-2.5 font-serif text-[1.85rem] leading-none tracking-tight text-ink"
+                  >
                     {item.label}
                   </Link>
                 </motion.div>
               ))}
+              <motion.div
+                initial={reduce ? false : { opacity: 0, y: 8 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1], delay: 0.32 }}
+                className="pt-3"
+              >
+                <Link href="/contact" className="btn btn-primary w-full justify-center">
+                  Write to us
+                  <Arrow />
+                </Link>
+              </motion.div>
             </div>
           </motion.nav>
         ) : null}
