@@ -36,8 +36,8 @@ export default function StoryPage() {
           sizes="(min-width: 1024px) 55vw, 100vw"
         />
         <Reveal delay={0.08} className="lg:col-span-5">
-          <p className="font-serif text-6xl leading-none text-sand">“</p>
-          <p className="font-serif text-3xl leading-snug tracking-[-0.03em] text-ink">
+          <p className="font-serif text-5xl leading-none text-sand sm:text-6xl">“</p>
+          <p className="font-serif text-2xl leading-snug tracking-[-0.03em] text-ink sm:text-3xl">
             Consumers deserve products developed with a doctor’s understanding of skin health.
           </p>
           <p className="mt-6 text-base leading-8 text-muted">

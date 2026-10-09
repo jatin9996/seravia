@@ -23,7 +23,7 @@ export default function ConcernsPage() {
       <div className="mx-auto max-w-6xl px-5 pb-8 sm:px-8">
         <nav aria-label="Concerns" className="flex flex-wrap gap-2">
           {concerns.map((concern) => (
-            <a key={concern.id} href={`#${concern.id}`} className="btn btn-ghost !py-2 !text-sm">
+            <a key={concern.id} href={`#${concern.id}`} className="btn btn-ghost px-4 py-2.5! text-sm!">
               {concern.title}
             </a>
           ))}

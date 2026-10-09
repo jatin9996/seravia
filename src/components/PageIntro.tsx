@@ -18,7 +18,7 @@ export function PageIntro({
   const reduce = useReducedMotion();
 
   return (
-    <header className="mx-auto max-w-6xl px-5 pb-6 pt-14 sm:px-8 sm:pt-20">
+    <header className="@container mx-auto max-w-6xl px-5 pb-6 pt-10 sm:px-8 sm:pt-20">
       <motion.p
         className="flex items-center gap-3 text-[0.72rem] font-medium uppercase tracking-[0.22em] text-moss"
         initial={reduce ? false : { opacity: 0, y: 8 }}
@@ -33,7 +33,7 @@ export function PageIntro({
         />
         {eyebrow}
       </motion.p>
-      <h1 className="mt-4 max-w-3xl font-serif text-[clamp(2.7rem,5.5vw,4.8rem)] leading-[0.96] tracking-[-0.035em] text-ink">
+      <h1 className="mt-4 max-w-3xl font-serif text-[clamp(2rem,8.6cqi,4.8rem)] leading-[1.02] tracking-[-0.035em] text-ink sm:leading-[0.96]">
         <Words text={title} delay={0.08} />
       </h1>
       <motion.div

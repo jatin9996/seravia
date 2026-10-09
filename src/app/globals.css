@@ -3,31 +3,34 @@
 @theme {
   --font-sans: var(--font-outfit), ui-sans-serif, system-ui, sans-serif;
   --font-serif: var(--font-fraunces), Georgia, "Times New Roman", serif;
-  --color-ink: #14241c;
-  --color-leaf: #1c4636;
-  --color-moss: #3d6a54;
-  --color-sage: #d7e4d8;
-  --color-paper: #f4efe6;
-  --color-cream: #fbf8f3;
-  --color-clay: #a3533c;
-  --color-sand: #e6d5c0;
-  --color-gold: #a88455;
-  --color-muted: #5e675f;
+  --color-ink: #1b1916;
+  --color-leaf: #1a3c34;
+  --color-moss: #3c6556;
+  --color-sage: #e2ebe4;
+  --color-paper: #f4efe8;
+  --color-cream: #fbf8f4;
+  --color-clay: #8f3e2e;
+  --color-sand: #e6d3c2;
+  --color-gold: #6e5336;
+  --color-gilt: #e6cba8;
+  --color-muted: #5c564f;
 }
 
 html {
   scroll-behavior: smooth;
+  overflow-x: clip;
 }
 
 body {
   background: var(--color-paper);
   color: var(--color-ink);
   font-family: var(--font-outfit), ui-sans-serif, system-ui, sans-serif;
+  overflow-x: clip;
 }
 
 ::selection {
-  background: #e7cfc0;
-  color: #14241c;
+  background: #e8d0c0;
+  color: #1b1916;
 }
 
 :focus-visible {
@@ -85,7 +88,7 @@ body {
 }
 
 .btn-ghost {
-  border: 1px solid rgb(20 36 28 / 18%);
+  border: 1px solid rgb(27 25 22 / 16%);
   color: var(--color-ink);
   background: transparent;
 }
@@ -107,11 +110,14 @@ body {
 
 .field {
   width: 100%;
+  min-height: 48px;
   border-radius: 0.9rem;
-  border: 1px solid rgb(20 36 28 / 12%);
+  border: 1px solid rgb(27 25 22 / 12%);
   background: var(--color-paper);
   padding: 0.85rem 0.95rem;
   color: var(--color-ink);
+  font-size: 16px;
+  line-height: 1.4;
   outline: none;
   transition: border-color 0.2s ease, background-color 0.2s ease;
 }

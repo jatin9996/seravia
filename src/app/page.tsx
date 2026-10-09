@@ -17,11 +17,11 @@ export default function HomePage() {
         <Image src="/images/leaves.jpg" alt="" fill className="object-cover opacity-30" sizes="100vw" />
         <div className="absolute inset-0 bg-ink/75" />
         <Reveal className="relative mx-auto max-w-4xl px-5 py-24 text-center sm:px-8 sm:py-32">
-          <p className="text-xs uppercase tracking-[0.22em] text-gold">The belief</p>
-          <p className="quote-mark font-serif text-7xl leading-none text-gold/80" aria-hidden="true">
+          <p className="text-xs uppercase tracking-[0.22em] text-gilt">The belief</p>
+          <p className="quote-mark font-serif text-7xl leading-none text-gilt/90" aria-hidden="true">
             “
           </p>
-          <blockquote className="font-serif text-[clamp(2rem,4.6vw,3.7rem)] leading-[1.15] tracking-[-0.03em]">
+          <blockquote className="font-serif text-[clamp(1.65rem,4.6vw,3.7rem)] leading-[1.2] tracking-[-0.03em] sm:leading-[1.15]">
             Skincare should be guided by science, not just marketing.
           </blockquote>
           <p className="mx-auto mt-6 max-w-2xl text-base leading-7 text-cream/75">
@@ -106,7 +106,7 @@ export default function HomePage() {
               >
                 <Link
                   href={`/concerns#${concern.id}`}
-                  className="card-shine group relative flex h-full flex-col justify-between overflow-hidden rounded-[1.4rem] border border-ink/10 bg-cream p-6 transition duration-500 hover:-translate-y-1.5 hover:border-leaf/30 hover:shadow-[0_24px_50px_-28px_rgba(20,36,28,0.55)]"
+                  className="card-shine group relative flex h-full flex-col justify-between overflow-hidden rounded-[1.4rem] border border-ink/10 bg-cream p-6 transition duration-500 hover:-translate-y-1.5 hover:border-leaf/30 hover:shadow-[0_24px_50px_-28px_rgba(27,25,22,0.45)]"
                 >
                   <div>
                     <div className="flex items-center justify-between text-xs uppercase tracking-[0.18em] text-gold">
@@ -147,7 +147,7 @@ export default function HomePage() {
       <section className="bg-leaf text-cream">
         <div className="mx-auto grid max-w-6xl gap-12 px-5 py-20 sm:px-8 lg:grid-cols-12 lg:py-28">
           <Reveal className="lg:col-span-4">
-            <p className="text-[0.72rem] uppercase tracking-[0.22em] text-gold">The method</p>
+            <p className="text-[0.72rem] uppercase tracking-[0.22em] text-gilt">The method</p>
             <h2 className="mt-3 font-serif text-4xl leading-[1.05] tracking-[-0.03em] sm:text-5xl">
               From a concern to a formula that can live in this weather.
             </h2>
@@ -175,24 +175,24 @@ export default function HomePage() {
             will not be worn, it cannot help.
           </p>
         </Reveal>
-        <div className="grid grid-cols-2 gap-4">
+        <div className="grid grid-cols-2 gap-3 sm:gap-4">
           <ImageFrame
             src="/images/monsoon.jpg"
             alt="Raindrops on glass, a study in humidity."
-            className="mt-10 aspect-[3/4] rounded-[1.4rem]"
-            sizes="30vw"
+            className="aspect-[3/4] rounded-[1.4rem] min-[420px]:mt-8"
+            sizes="(min-width: 1024px) 22vw, 45vw"
           />
           <ImageFrame
             src="/images/serum-hands.jpg"
             alt="A drop of clear serum falling from a glass dropper toward an open palm."
             className="aspect-[3/4] rounded-[1.4rem]"
-            sizes="30vw"
+            sizes="(min-width: 1024px) 22vw, 45vw"
           />
         </div>
       </section>
 
       <section className="px-5 pb-20 sm:px-8">
-        <Reveal className="mx-auto flex max-w-6xl flex-col items-start justify-between gap-8 rounded-[1.8rem] bg-sand px-7 py-12 sm:px-12 sm:py-14 md:flex-row md:items-center">
+        <Reveal className="mx-auto flex max-w-6xl flex-col items-start justify-between gap-8 rounded-[1.8rem] bg-sand px-5 py-10 sm:px-12 sm:py-14 md:flex-row md:items-center">
           <div>
             <p className="text-[0.72rem] uppercase tracking-[0.22em] text-clay">Seravia</p>
             <h2 className="mt-3 max-w-xl font-serif text-4xl leading-[1.05] tracking-[-0.03em] sm:text-5xl">
